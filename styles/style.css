@@ -2,4 +2,182 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--cover-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
+.header {
+  block-size: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 40px;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  justify-self: self-end;
+  margin-block-start: 10px;
+  margin-inline-end: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color-secoundary);
+  border-right: 1px solid var(--accent-color-secoundary);
+}
+
+.decorated-zone::after {
+  content: '';
+  justify-self: self-start;
+  margin-block-end: 10px;
+  margin-inline-start: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--accent-color-secoundary);
+  border-left: 1px solid var(--accent-color-secoundary);
+  position: absolute;
+  align-self: self-end;
+}
+
+.header__decoration {
+  text-transform: uppercase;
+  display: inline-flex;
+  color: var(--accent-color);
+  position: absolute;
+  justify-self: self-end;
+  font-size: 18px;
+  font-family: var(--main-font, sans-serif);
+  font-weight: normal;
+  padding: 10px 19px
+}
+
+.header__decoration::after {
+  content: '';
+  display: inline-flex;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  margin-left: 10px;
+  align-self: center;
+}
+
+.header__theme-menu {
+  justify-self: self-end;
+  align-self: center;
+  grid-row: 1;
+}
+
+.header__theme-menu-list {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  font-size: var(--base-font-size);
+  font-family: var(--main-font, sans-serif);
+  color: var(--accent-color-secoundary);
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  inline-size: 4.375rem;
+  block-size: 1.625rem;
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color-secoundary-translucent);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color-secoundary);
+}
+
+.header__theme-menu-button:disabled {
+  border: 1px solid var(--accent-color-secoundary);
+}
+
+.header__title {
+  grid-row: 2;
+}
+
+.title{
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-weight: 700;
+  font-family: var(--main-font, sans-serif);
+  line-height: 83%;
+}
+
+
+.header__subtitle-block {
+  grid-row: 3;
+  margin-inline: 10px;
+  block-size: min-content;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.subtitle {
+  font-size: var(--base-font-size);
+  font-family: var(--main-font, sans-serif);
+  color: var(--subtitle-color);
+  font-weight: 700;
+}
+
+.section {
+  margin-block-end: 50px;
+  padding-inline: 10px;
+}
+
+.section__title {
+  color: var(--accent-color-secoundary);
+  font-family: var(--main-font, sans-serif);
+  font-size: var(--base-font-size);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-block-end: 20px;
+}
+
+.card__title {
+  color: var(--subtitle-color);
+  font-size: var(--base-font-size);
+  font-family: var(--main-font, sans-serif);
+  margin-block-end: 10px;
+}
+
+.card__content {
+  color: var(--main-text-color);
+  font-size: var(--base-font-size);
+  font-family: var(--main-font, sans-serif);
+  
+}
+
+.card__content-link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.card__content-link:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.card__content-link:focus-visible {
+  outline: 1px solid var(--main-text-color);
+  outline-offset: 1px;
 }
