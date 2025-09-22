@@ -4,6 +4,7 @@
 */
 :root {
   --cover-image: url(../images/cover-image-dark.png);
+  --header-decoration-display: inline-flex;
   --bg-color: rgb(0, 0, 40);
   --accent-color: rgb(255, 0, 112);
   --accent-color-secoundary: rgb(255, 0, 112);
@@ -13,4 +14,9 @@
   --main-font: "IBM Plex mono";
   --base-font-size: 1.125rem;
   --main-text-color: rgb(241, 178, 206);
+  --main-inline-padding: 10px;
+  --decoration-margins: 10px;
+  --content-blocks-margin: 39px;
+  --sections-margin: 50px;
+  --cards-margin: 20.9px
 }
